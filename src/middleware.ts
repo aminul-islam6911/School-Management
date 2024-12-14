@@ -11,7 +11,6 @@ console.log(matchers);
 
 export default clerkMiddleware(async (auth, req) => {
   const sessionClaims = (await auth()).sessionClaims;
-//   console.log(sessionClaims);
 
   const role = (sessionClaims?.metadata as { role?: string })?.role;
 
